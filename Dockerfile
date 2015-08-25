@@ -12,10 +12,10 @@ FROM mongo:latest
 MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 
 # Define mountable directories.
-VOLUME ["/data/db"]
+VOLUME ["/data", "/var/log/mongodb/"]
 
 # 使用自定义配置文件
-COPY mongo.conf /usr/local/etc/redis/mongo.conf
+COPY mongod.conf /etc/mongod.conf
 
 
 EXPOSE 27071
