@@ -5,8 +5,8 @@ docker rm ibbd-mongo
 
 docker run --name=ibbd-mongo -d \
     -p 27071:27071 \
-    -v /data/mongo:/data/db \
-    -v /var/log/mongodb:/var/log/mongodb \
+    -v /data/mongo:/data/mongo/ \
+    -v /var/log/mongo:/var/log/mongo \
     ibbd/mongo
 
 docker ps
