@@ -15,7 +15,7 @@ MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 VOLUME ["/data", "/var/log/mongodb/"]
 
 # 使用自定义配置文件
-COPY mongod.conf /etc/mongod.conf
+COPY conf/mongod.conf /etc/mongod.conf
 
 
 EXPOSE 27071
