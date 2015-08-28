@@ -18,6 +18,8 @@ VOLUME ["/var/log/mongodb", "/var/lib/mongodb"]
 # 使用自定义配置文件
 COPY conf/mongod.conf /etc/mongod.conf
 
+# 解决时区问题
+env TZ "Asia/Shanghai"
 
 EXPOSE 27071
 
