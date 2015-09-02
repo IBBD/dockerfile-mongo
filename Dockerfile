@@ -16,7 +16,7 @@ MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 VOLUME ["/var/log/mongodb", "/var/lib/mongodb"]
 
 # 使用自定义配置文件
-COPY conf/mongod.conf /etc/mongod.conf
+COPY conf/mongod.conf /etc/mongod.conf.orig
 
 # 解决时区问题
 env TZ "Asia/Shanghai"
