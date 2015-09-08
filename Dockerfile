@@ -13,10 +13,11 @@ MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 
 
 # Define mountable directories.
-VOLUME ["/var/log/mongodb", "/var/lib/mongodb"]
+#VOLUME ["/var/log/mongodb", "/var/lib/mongodb"]
+VOLUME /var/lib/mongodb
 
 # 使用自定义配置文件
-COPY conf/mongod.conf /etc/mongod.conf.orig
+#COPY conf/mongod.conf /etc/mongod.conf.orig
 
 # 解决时区问题
 env TZ "Asia/Shanghai"
